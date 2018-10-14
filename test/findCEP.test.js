@@ -78,7 +78,7 @@ describe('Testing postal code API on server running', () => {
     request.get('http://localhost:3000/f/60714903', function (err, res, body) {
       data = JSON.parse(res.body)
       expect(data).to.have.nested.property('return.end')
-      expect(data).to.have.nested.property('return.bairro')
+      expect(data).to.have.nested.property('return.bairros')
       expect(data).to.have.nested.property('return.cep')
       expect(data).to.have.nested.property('return.uf')
       expect(data).to.have.nested.property('return.cidade')
