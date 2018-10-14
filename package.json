@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "mocha --exit",
+    "test": "mocha --exit --timeout 5000",
     "mocha": "./node_modules/.bin/mocha tests/**/*.specs.js"
   },
   "dependencies": {

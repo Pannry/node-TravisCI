@@ -8,7 +8,9 @@ router.get('/:id', function (req, res, next) {
   const CepId = req.params.id;
 
   const getCEP = new FindCep(CepId);
-  getCEP.then(result => res.send(result));
+  getCEP
+    .then(result => res.send(result))
+    .catch(() => res.send('not a valid'));
 
 });
 
